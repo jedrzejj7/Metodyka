@@ -173,7 +173,7 @@
                   "id": "49600215-7d4d-4dda-ba71-4c27bd323330",
                   "title": "Podszycie się",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Spoofing",
                   "description": "Atakujący wykorzystuje słabe hasła lub wycieki, aby zalogować się na konto innego klienta i uzyskać dostęp do jego danych osobowych.",
                   "mitigation": "Wdrożenie silnej polityki haseł, limitowania nieudanych prób logowania",
@@ -184,7 +184,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "repudiation": 0
               }
             }
@@ -308,7 +308,7 @@
                   "id": "b8eaf891-09ad-4dd2-ac17-a0008d17e77d",
                   "title": "Podszycie się",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Spoofing",
                   "description": "Podszycie się",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
@@ -319,9 +319,16 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 2,
+                "spoofing": 3,
                 "repudiation": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -446,7 +453,7 @@
                   "id": "49ba4939-34c1-4dea-baad-a71169f3c5f2",
                   "title": "SQL Injection",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Critical",
                   "type": "Tampering",
                   "description": "SQL Injection",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
@@ -458,7 +465,7 @@
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 2,
+                "tampering": 3,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
@@ -588,7 +595,7 @@
                   "id": "3b112379-5767-447e-b278-f9c4d8e3a9cf",
                   "title": "Nieautoryzowane przejęcie uprawnień",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Critical",
                   "type": "Elevation of privilege",
                   "description": "Nieautoryzowane przejęcie uprawnień",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
@@ -604,7 +611,7 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 2
+                "elevationOfPrivilege": 3
               }
             }
           },
@@ -736,7 +743,7 @@
                   "id": "4c1dcc7e-5312-4954-b35d-afe98067a70d",
                   "title": "Wyciek danych",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "Critical",
                   "type": "Information disclosure",
                   "description": "Wyciek danych",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
@@ -749,7 +756,7 @@
               "threatFrequency": {
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 2,
+                "informationDisclosure": 3,
                 "denialOfService": 0
               }
             }
