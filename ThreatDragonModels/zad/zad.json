@@ -21,35 +21,36 @@
         "cells": [
           {
             "position": {
-              "x": 433.4999999999998,
-              "y": 7.105427357601002e-13
+              "x": 433.4999999999976,
+              "y": 2.3305801732931286e-12
             },
             "size": {
-              "width": 280,
-              "height": 370
+              "width": 450,
+              "height": 620
             },
             "attrs": {
               "label": {
-                "text": "Internet/Sieć laboratoryjna"
+                "text": "Serwer"
               }
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "2b310491-1bd3-411d-83c1-4afebf05f3c7",
             "zIndex": -1,
+            "id": "2b310491-1bd3-411d-83c1-4afebf05f3c7",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Internet/Sieć laboratoryjna",
+              "name": "Serwer",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "832582d7-7be7-447c-96ba-5336b49d0505",
-                "acf13f10-6d76-4918-8142-f418d8dd4359"
+                "acf13f10-6d76-4918-8142-f418d8dd4359",
+                "832582d7-7be7-447c-96ba-5336b49d0505"
               ],
               "containedElements": [
                 "c0ec05e3-279c-4ef3-8921-d2ba1e2dfbf2",
-                "5d0b548d-7e13-4a7d-9d3f-cf4f62a772d1"
+                "5d0b548d-7e13-4a7d-9d3f-cf4f62a772d1",
+                "843e7546-9570-4e09-9b4a-18ae7d6db5db"
               ]
             }
           },
@@ -67,13 +68,14 @@
                 "text": "Gość/Klient"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -157,7 +159,6 @@
               ]
             },
             "id": "b8cd041e-82ab-462a-97f0-0a0499af86e2",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Gość/Klient",
@@ -165,9 +166,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "49600215-7d4d-4dda-ba71-4c27bd323330",
+                  "title": "Podszycie się",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Atakujący wykorzystuje słabe hasła lub wycieki, aby zalogować się na konto innego klienta i uzyskać dostęp do jego danych osobowych.",
+                  "mitigation": "Wdrożenie silnej polityki haseł, limitowania nieudanych prób logowania",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -184,13 +203,14 @@
                 "text": "Administrator"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -274,7 +294,6 @@
               ]
             },
             "id": "aa2bf4e7-548f-4279-9c0a-8cacbaffc77a",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Administrator",
@@ -282,15 +301,33 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "b8eaf891-09ad-4dd2-ac17-a0008d17e77d",
+                  "title": "Podszycie się",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Podszycie się",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "repudiation": 0
+              }
             }
           },
           {
             "position": {
-              "x": 453.5,
-              "y": 180.0000000000001
+              "x": 508.4999999999976,
+              "y": 280.0000000000001
             },
             "size": {
               "width": 210,
@@ -301,13 +338,14 @@
                 "text": "Serwer aplikacji web/API"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -391,7 +429,6 @@
               ]
             },
             "id": "c0ec05e3-279c-4ef3-8921-d2ba1e2dfbf2",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "Serwer aplikacji web/API",
@@ -399,18 +436,40 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "49ba4939-34c1-4dea-baad-a71169f3c5f2",
+                  "title": "SQL Injection",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "SQL Injection",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
             "position": {
-              "x": 478.5,
-              "y": 10
+              "x": 663.5,
+              "y": 25
             },
             "size": {
               "width": 160,
@@ -421,13 +480,14 @@
                 "text": "Panel administracyjny"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -511,7 +571,6 @@
               ]
             },
             "id": "5d0b548d-7e13-4a7d-9d3f-cf4f62a772d1",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Panel administracyjny",
@@ -519,18 +578,40 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "3b112379-5767-447e-b278-f9c4d8e3a9cf",
+                  "title": "Nieautoryzowane przejęcie uprawnień",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": "Nieautoryzowane przejęcie uprawnień",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 2
+              }
             }
           },
           {
             "position": {
-              "x": 18,
-              "y": 410.0000000000001
+              "x": 598.4999999999976,
+              "y": 540.0000000000001
             },
             "size": {
               "width": 120,
@@ -541,16 +622,19 @@
                 "text": "Baza danych"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -634,7 +718,6 @@
               ]
             },
             "id": "843e7546-9570-4e09-9b4a-18ae7d6db5db",
-            "zIndex": 5,
             "data": {
               "type": "tm.Store",
               "name": "Baza danych",
@@ -642,13 +725,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "4c1dcc7e-5312-4954-b35d-afe98067a70d",
+                  "title": "Wyciek danych",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Wyciek danych",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -671,7 +774,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Logowanie/Zarządzanie",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -687,55 +790,7 @@
               ]
             },
             "labels": [
-              "Data Flow"
-            ],
-            "id": "832582d7-7be7-447c-96ba-5336b49d0505",
-            "source": {
-              "cell": "b8cd041e-82ab-462a-97f0-0a0499af86e2",
-              "port": "372969c1-017b-45e7-9e6a-1d529a25d4b8"
-            },
-            "target": {
-              "cell": "c0ec05e3-279c-4ef3-8921-d2ba1e2dfbf2",
-              "port": "cdd9f675-2c66-4dce-9611-4e687aacd95f"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "2b310491-1bd3-411d-83c1-4afebf05f3c7"
-              ]
-            },
-            "labels": [
-              "Data Flow"
+              "Logowanie/Zarządzanie"
             ],
             "id": "acf13f10-6d76-4918-8142-f418d8dd4359",
             "source": {
@@ -745,7 +800,8 @@
             "target": {
               "cell": "5d0b548d-7e13-4a7d-9d3f-cf4f62a772d1",
               "port": "9da21df7-b8d1-4e8b-8e2c-26b8839a434c"
-            }
+            },
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -767,7 +823,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Żądania HTTP/HTTPS",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -778,28 +834,30 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "2b310491-1bd3-411d-83c1-4afebf05f3c7"
+              ]
             },
             "labels": [
-              "Data Flow"
+              "Żądania HTTP/HTTPS"
             ],
-            "id": "5a7eaa1e-284e-4600-8ef1-89de564d1926",
+            "id": "832582d7-7be7-447c-96ba-5336b49d0505",
             "source": {
-              "x": 640,
-              "y": 90
+              "cell": "b8cd041e-82ab-462a-97f0-0a0499af86e2",
+              "port": "372969c1-017b-45e7-9e6a-1d529a25d4b8"
             },
             "target": {
-              "cell": "843e7546-9570-4e09-9b4a-18ae7d6db5db",
-              "port": "77e7be62-0d1e-4ee8-a7cf-6257cc68092e"
+              "cell": "c0ec05e3-279c-4ef3-8921-d2ba1e2dfbf2",
+              "port": "9da21df7-b8d1-4e8b-8e2c-26b8839a434c"
             },
             "vertices": [
               {
-                "x": 320,
-                "y": 170
+                "x": 330,
+                "y": 340
               },
               {
-                "x": 300,
-                "y": 190
+                "x": 470,
+                "y": 340
               }
             ]
           },
@@ -823,7 +881,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Żądania HTTP",
+              "name": "Zapytania SQL",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -837,17 +895,73 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Żądania HTTP"
+              "Zapytania SQL"
             ],
             "id": "2c8e759d-72b3-42ba-bc5e-fbbb6992e700",
             "source": {
-              "x": 480,
-              "y": 270
+              "cell": "c0ec05e3-279c-4ef3-8921-d2ba1e2dfbf2",
+              "port": "cdd9f675-2c66-4dce-9611-4e687aacd95f"
             },
             "target": {
               "cell": "843e7546-9570-4e09-9b4a-18ae7d6db5db",
-              "port": "77e7be62-0d1e-4ee8-a7cf-6257cc68092e"
+              "port": "2109fa11-b48e-4c3f-8aee-b38e394e1a4e"
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Zapytania SQL",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Zapytania SQL"
+            ],
+            "id": "5a7eaa1e-284e-4600-8ef1-89de564d1926",
+            "source": {
+              "cell": "5d0b548d-7e13-4a7d-9d3f-cf4f62a772d1",
+              "port": "cdd9f675-2c66-4dce-9611-4e687aacd95f"
+            },
+            "target": {
+              "cell": "843e7546-9570-4e09-9b4a-18ae7d6db5db",
+              "port": "2109fa11-b48e-4c3f-8aee-b38e394e1a4e"
+            },
+            "vertices": [
+              {
+                "x": 718.5,
+                "y": 240
+              },
+              {
+                "x": 760,
+                "y": 320
+              }
+            ]
           }
         ],
         "description": "z"
@@ -855,6 +969,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "jj",
-    "threatTop": 0
+    "threatTop": 6
   }
 }
